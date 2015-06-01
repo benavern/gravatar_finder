@@ -1,0 +1,37 @@
+body{
+	background: #eee;
+}
+
+header, footer{
+	background: #456;
+	color:#fafafa;
+	padding: 50px;
+}
+
+.container{
+	width:90%;
+	max-width: 1024px;
+	display:block;
+	margin:0 auto;
+}
+
+.align-center{
+	text-align:center;
+}
+
+.z-box{
+	background:#fafafa;
+	position:relative;
+}
+
+.z-box a img{
+	display:block;
+	top:50%;
+	left:50%;
+	bottom:0;
+	right:0;
+	max-width:90%;
+	height:auto;	
+}
+
+
