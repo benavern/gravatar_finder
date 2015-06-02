@@ -11,40 +11,57 @@
 	<header>
 		<div class="container align-center">
 			<h1>Gravatar Finder</h1>
-			<h4>Just Type your email and see the magic</h4>
+			<h4>Just Type your email and press Enter</h4>
 		</div>
 	</header>
 	<div id="content">
-		<div class="container ">
+		<div class="container">
 			
-			<form action="app.php" class="align-center">
-				<label for="email">
-					Enter your email address here
-					<input type="email" name="email"id="email">
-				</label>
-				<input type="submit">
+<!--FORM-->
+			<div class="z-grid">
+				<div class="z-1">
+					<div class="z-box red-box" id="error"></div>
+				</div>
+			</div>
+			
+			<form action="api.php" class="align-center" id="theform">
+				
+				<input type="email" name="email"id="email" autofocus autocomplete="off">
+				
+<!--				<input type="submit" value="GO">-->
 			</form>
 			
+			
+<!--IMGS-->
 			<div class="z-grid">
 				<div class="z-3 align-center">
 					<div class="z-box">
-						<a href="" class="g200">
-							<img src="" alt="gravatar 200">
-						</a>
+						
+						<div class="img200">
+							<img src="http://placehold.it/200x200" alt="placeholder">
+						</div>
+						<div class="desc200"></div>
+						
 					</div>
 				</div>
 				<div class="z-3 align-center">
 					<div class="z-box">
-						<a href="" class="g120">
-							<img src="" alt="gravatar 120">
-						</a>
+						
+						<div class="img120">
+							<img src="http://placehold.it/120x120" alt="placeholder">
+						</div>
+						<div class="desc120"></div>
+						
 					</div>
 				</div>
 				<div class="z-3 align-center">
 					<div class="z-box">
-						<a href="" class="g60">
-							<img src="" alt="gravatar 60">
-						</a>		
+						
+						<div class="img60">
+							<img src="http://placehold.it/60x60" alt="placeholder">
+						</div>
+						<div class="desc60"></div>	
+						
 					</div>
 				</div>
 			</div>
@@ -52,8 +69,9 @@
 		</div>
 	</div>
 	<footer>
-		
-		that's all
+		<div class="container align-center">
+			<h4>&copy Benjamin Caradeuc 2015</h4>
+		</div>
 	</footer>
 	
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
