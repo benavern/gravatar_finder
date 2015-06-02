@@ -65,6 +65,14 @@ header, footer{
 	font-size:1.3rem;
 	color:#456;
 }
+#theform input[type="submit"]{
+	background: #456;
+	color:white;
+	font-weight:bold;
+	margin:10px 0;
+	
+	display:none;
+}
 
 .z-grid input{
 	background: #ddd;
@@ -79,6 +87,7 @@ header, footer{
 }
 
 
+
 .download{
 	background:#456;
 	padding:10px 20px;
@@ -87,4 +96,32 @@ header, footer{
 	color: #fafafa;
 	text-decoration: none;
 	border-radius:4px;
+}
+
+.mobile{
+	display:none;
+}
+.pc{
+	display:inline;
+}
+
+
+
+@media (max-width:768px){
+	
+	#theform input{
+		width:100%
+	}
+	
+	#theform input[type="submit"]{
+		display:block;
+	}
+	
+	.mobile{
+		display:inline;
+	}
+	.pc{
+		display:none;
+	}
+
 }

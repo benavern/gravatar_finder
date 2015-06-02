@@ -10,7 +10,7 @@ $(document).ready(function(){
 //		$("#error").html(data.md5).slideDown(600).delay(3000).slideUp();
 		for(var i in data.urls){
 			var url = data.urls[i];
-			$(".img"+i).html('<img src="'+ url +'" alt="your gravatar">');
+			$(".img"+i).html(i + "x" + i + '<img src="'+ url +'" alt="your gravatar">');
 			$(".desc"+i).html('<a class="download" href="'+ url +'" download>Download</a> <br> <input value="'+ url +'" readonly>')
 		}
 	};
@@ -30,10 +30,49 @@ $(document).ready(function(){
 	
 	$( "#theform" ).submit(function( event ) {
 		$("#error").hide();
-	  getData( $("#email").val() );
-	  event.preventDefault();
+		var mail = $("#email").val();
+	  	getData( mail );
+		window.location.hash = "#email=" + mail;
+	  	event.preventDefault();
 	});
 	
 	
 	
+	
+	
+	/* Add search string hability */
+	
+	function getQueryVariable(variable)
+	{
+       var query = window.location.hash.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+	}
+	
+
+	
+	(function(){
+		var mail = getQueryVariable("email");
+		if(mail !== false && mail != ""){
+			$("#email").val(mail);
+			getData(mail);
+			window.location.hash = "#email=" + mail;
+		}
+		
+	})();
+	
+	window.onpopstate = function(event) {
+//  alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
+			var mail = getQueryVariable("email");
+			if(mail !== false && mail != ""){
+				$("#email").val(mail);
+				getData(mail);
+				window.location.hash = "#email=" + mail;
+			}
+};
+
 });
