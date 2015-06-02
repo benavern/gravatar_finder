@@ -1,6 +1,9 @@
 # gravatar_finder
 Find your gravatar image easily
 
-## Work in progress ...
+## HowTo
+Just type you email adress in the input and press enter
+
+![screenshot](/screenshot.jpg "Screenshot")
 
 
